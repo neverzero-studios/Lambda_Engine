@@ -1,0 +1,98 @@
+﻿.code-editor-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem .5rem;
+    padding-top: 5px;
+    background: darken(@boulder,3%);
+    box-shadow: 5px 5px 10px rgba(0,0,0,.1);
+    border: 1px solid black;
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+
+        .btn {
+            background: @tundora;
+            padding: 1rem;
+            margin: 5px;
+            margin-top: 0;
+            border-radius: 2rem;
+            border: 2px solid @black;
+            .img {
+                width:30px;
+                height:30px;
+            }
+        }
+
+        .hover {
+            border-top: 2px solid @pale-blue-magenta;
+            border-left: 2px solid @pale-blue-magenta;
+            border-right: 2px solid @pale-blue-magenta;
+            //   background: linear-gradient( @tundora 25%, @pale-blue-magenta );
+        }
+
+        .active {
+           // background: linear-gradient( @tundora 25%, darken(@pale-blue-magenta, 10%) );
+            border-top: 2px solid darken(@pale-blue-magenta, 10%);
+            border-left: 2px solid darken(@pale-blue-magenta, 10%);
+            border-right: 2px solid darken(@pale-blue-magenta, 10%);
+        }
+    }
+
+    .code-container {
+        display: flex;
+        flex-direction: row;
+
+        .input-area {
+            margin: 0 auto;
+            width: 33%;
+            .close{
+                display:none;
+            }
+
+            .title-container {
+                padding: .5rem;
+                background: @tundora;
+                border: 1px solid black;
+
+                .title {
+                    color: whitesmoke;
+                    font-size: 12px;
+                }
+            }
+
+            .code-input-container {
+                width: 100%;
+                height: 80%;
+                display: flex;
+                flex-direction: row;
+
+                .line-counter {
+                    font-family: Courier, sans-serif;
+                    font-size: 14px;
+                    outline: none;
+                    background: darken(@boulder,6.5%);
+                    border: 1px solid black;
+                    resize: none;
+                    text-decoration: none;
+                    color: white;
+                    width: 10%;
+                }
+
+
+                .code {
+                    width: 90%;
+                    font-family: Courier, sans-serif;
+                    font-size: 14px;
+                    background: @boulder;
+                    outline: none;
+                    border: 1px solid black;
+                    resize: none;
+                    text-decoration: none;
+                    color: @pale-blue-magenta;
+                }
+            }
+        }
+    }
+}
