@@ -11,6 +11,7 @@
 		this.__button_container.classList.add('button-container');
 		this.__editor_container.appendChild(this.__button_container);
 		this.isActive = false;
+		
 		this.supportedLanguages = [
 			'html',
 			'css',

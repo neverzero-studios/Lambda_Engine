@@ -23,7 +23,6 @@
 }
 
 class Application {
-
 	constructor() {
 		this.editorSettings = new EditorSettings();
 		this.editor = new Editor();
@@ -67,6 +66,6 @@ class Application {
 		});
 	}
 }
-
+ const app = new Application();
 
 
