@@ -56,12 +56,12 @@ class Application {
 
 		this.inputAreas = document.querySelectorAll('.input-area');
 
-		var run_btn = settings_buttons[1];
+		this.run_btn = this.settings_buttons[1];
 
-		run_btn.addEventListener('click', (event) => {
-			editor.CompileCode(
-				editor.__html_input, editor.__css_input, editor.__js_input,
-				editor.__preview_context
+		this.run_btn.addEventListener('click', (event) => {
+			this.editor.CompileCode(
+				this.editor.__html_input, this.editor.__css_input, this.editor.__js_input,
+				this.editor.__preview_context
 			);
 		});
 	}
