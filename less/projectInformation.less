@@ -1,31 +1,54 @@
 .info-container {
-    background: @black;
+    background: @blue_10;
     display: flex;
-    width:100%;
-    .pic {
-        width: 4rem;
-        background: @tundora;
+    width: 100%;
+    padding: 10px;
+  
+    .pic-container {
+        width: 3rem;
+        height: 3rem;
+        background: darken(@blue_10, 5%);
         border-radius: 5rem;
+        box-shadow: 5px 3px 5px rgba(0,0,0,.1);
+        .img{
+            width:95%;
+            height:95%;
+            border-radius: 5rem;
+        }
     }
 
     .author {
-        
+
         flex-direction: column;
-        padding:.5rem;
+        padding: .5rem;
+
         h1 {
             font-size: 14px;
-            color: white;
+            color:@blue_70;
         }
 
         p {
             color: white;
-            font-size: 10px;
+            color:@blue_70;
         }
 
-        h3{
-            color:white;
-            font-size: 14px;
+        h3 {
+            color: white;
+            color:@blue_70;
         }
     }
 
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: @blue_10;
+    outline: none;
+
+    &:hover {
+        background-color:@pale-blue-magenta;
+    }
 }

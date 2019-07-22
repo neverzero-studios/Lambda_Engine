@@ -1,14 +1,18 @@
 class ProjectInformation{
-    constructor(){
+    constructor(_profile_img_src){
         this.__container = document.querySelector('.code-tools-container');
         this.__background = document.createElement('div');
         this.__background.classList.add('info-container');
         this.__container.appendChild(this.__background);
 
-        this.__dev_pic = document.createElement('div');
-        this.__dev_pic.classList.add('pic');
-        this.__background.appendChild(this.__dev_pic);
+        this.__pic_container = document.createElement('div');
+        this.__pic_container.classList.add('pic-container');
+        this.__background.appendChild(this.__pic_container);
 
+        this.__profile_picture = document.createElement('img');
+        this.__profile_picture.classList.add('img');
+        this.__profile_picture.src = _profile_img_src;
+        this.__pic_container.appendChild(this.__profile_picture);
         this.__author = document.createElement('div');
         this.__author.classList.add('author');
         this.__background.appendChild(this.__author);
@@ -28,5 +32,5 @@ class ProjectInformation{
 
     }
 }
-
-const info = new  ProjectInformation();
+var profile_img_src = './img/profile_dummy.jpg';
+const info = new  ProjectInformation(profile_img_src);

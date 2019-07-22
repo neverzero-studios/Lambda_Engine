@@ -1,7 +1,7 @@
 ﻿.code-editor-container {
     display: flex;
     flex-direction: column;
-    background: darken(@boulder, 3%);
+    background: @blue_50;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
     border: 1px solid black;
 
@@ -9,8 +9,8 @@
         width: 5%;
         padding: 0 3px;
         margin: 5px auto;
-        background: darken(@boulder, 5%);
-        color: @boulder;
+        background: @blue_10;
+        color: @blue_50;
         font-size: 1.3rem;
         border-radius: 1rem;
 
@@ -18,6 +18,7 @@
 
     .hover {
         color: @pale-blue-magenta;
+        cursor: pointer;
     }
 
     .active {
@@ -33,15 +34,14 @@
     flex-direction: row;
     margin: 0 auto;
     padding-top: 5px;
-
     .btn {
-        background: @tundora;
+        background: @blue_10;
         padding: 1rem;
         margin: 5px;
         margin-top: 0;
         border-radius: 2rem;
-        border: 2px solid @black;
-
+        border: 2px solid @blue_10;
+        color:@blue_70;
         .img {
             width: 30px;
             height: 30px;
@@ -49,10 +49,8 @@
     }
 
     .hover {
-        border-top: 2px solid @pale-blue-magenta;
-        border-left: 2px solid @pale-blue-magenta;
-        border-right: 2px solid @pale-blue-magenta;
         color: @pale-blue-magenta;
+        cursor: pointer;
     }
 
     .active {
@@ -77,8 +75,8 @@
 
         .title-container {
             padding: .5rem;
-            background: @tundora;
-            border: 1px solid black;
+            background: darken(@blue_50,1%);
+            border: 1px solid darken(@blue_70, 2%);
 
             .title {
                 color: whitesmoke;
@@ -96,23 +94,23 @@
                 font-family: Courier, sans-serif;
                 font-size: 14px;
                 outline: none;
-                background: darken(@boulder, 6.5%);
-                border: 1px solid black;
+                background: darken(@blue_10, 2%);
+                border: 1px solid  darken(@blue_70, 2%);
                 resize: none;
                 text-decoration: none;
                 color: white;
                 width: 10%;
             }
 
-
+           
             .code {
                 padding:1rem;
                 width: 90%;
                 font-family: Courier, sans-serif;
                 font-size: 14px;
-                background: @boulder;
+                background: @blue_30;
                 outline: none;
-                border: 1px solid black;
+                border: 1px solid  darken(@blue_70, 2%);
                 resize: none;
                 text-decoration: none;
                 color: @pale-blue-magenta;

@@ -1,24 +1,27 @@
 ﻿.code-tools-container {
     display: flex;
+
     .tools-background {
-        background: @black;
         display: flex;
         flex-direction: row-reverse;
+        background: @blue_10;
 
         .btn {
+            background: lighten(@blue_10, 1%);
             margin: 10px;
-            padding: .5rem;
-            border: 2px solid @boulder;
-            color: azure;
+            padding:.5rem 1rem;
+            color: @blue_70;
             border-radius: 10px;
+            border: 2px solid @blue_10;
+            line-height: 2.3;
+         
+        }
 
-            .img {
-               
-            }
 
-            &:hover {
-                background: @deep-purple;
-            }
+        .hover {
+            color: @pale-blue-magenta;
+            cursor: pointer;
+        
         }
     }
 }
