@@ -1,7 +1,8 @@
 ﻿class Button {
-	constructor(_name = null, _target, _src = null) {
-		this.isActive = false;
+	constructor(_name = null, _target, _src = null, _class = 'btn') {
+		this.is_active = false;
 		this.__button = document.createElement('div');
+		this.__button.classList.add(_class);
 		if (_src !== null) {
 			this.__button_img = document.createElement('img');
 			this.__button_img.classList.add('img');

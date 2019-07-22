@@ -11,7 +11,7 @@
 		this.__button_container.classList.add('button-container');
 		this.__editor_container.appendChild(this.__button_container);
 		this.isActive = false;
-		
+
 		this.supportedLanguages = [
 			'html',
 			'css',
@@ -21,12 +21,11 @@
 		this.buttons= [
 			"html",
 			"css",
-			"JS",
-			"Demo"
-		];
+			"JS"
+			];
 
 		this.buttons.forEach((_btn) => {
-			_btn = new Button(_btn, this.__button_container, null);
+			_btn = new Button(_btn, this.__button_container);
 		});
 
 		this.supportedLanguages.forEach((_language) => {
@@ -46,6 +45,9 @@
 
 		this.__preview_context = document.getElementById('code').contentWindow.document;
 
+		this.expand_btn = new Button('°°°', this.__editor_container);
+		this.expand_btn.__button.classList.add('expand');
+		
 	}
 	CreateInputArea(_id, _container) {
 
@@ -94,8 +96,6 @@
 		);
 		_window.close();
 
+	
 	}
 }
-
-
-
